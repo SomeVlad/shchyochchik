@@ -16,7 +16,7 @@ export const settings = localStore('settings', [
 
 // !!!
 export const roles = derived(settings, ($settings) => {
-    return $settings.map((setting) => setting.name)
+    return $settings.map(({ name }) => name)
 })
 
 export const amounts = writable<Amounts>({
