@@ -9,6 +9,9 @@
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
+    "@material/typography": "^13.0.0",
+    "@smui/layout-grid": "^5.0.0-beta.7",
+    "@smui/textfield": "^5.0.0-beta.7",
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.11",
     "@tsconfig/svelte": "^2.0.1",
     "prettier": "2.4.1",

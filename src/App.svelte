@@ -1,47 +1,44 @@
 <script lang="ts">
-    import Function from './lib/function.svelte'
     import Settings from './lib/settings/index.svelte'
     import Duty from './lib/duty.svelte'
     import Leaves from './lib/leaves.svelte'
-    import { settings, amounts, roles, holidays, spAmount } from './stores'
+    import Amount from './lib/amount.svelte'
+    import Holidays from './lib/holidays.svelte'
+    import Result from './lib/result.svelte'
 
-    function handleAmountChange({ detail }) {
-        const { amount, name } = detail
-        $amounts[name] = amount
-    }
+
+    import LayoutGrid, { Cell } from '@smui/layout-grid';
+
 </script>
 
-<main>
-    <h1>Щё</h1>
+<LayoutGrid>
+    <Cell span={12}>
+        <h1>Щё</h1>
+    </Cell>
 
-    <Settings />
+    <Cell span={6}>
+        <Amount />
 
-    {#each $roles as name, index (index)}
-        <Function
-            name={name}
-            amount={$amounts[name]}
-            on:amountChange={handleAmountChange}
-        />
-    {/each}
+        <Duty />
 
-    <Duty />
+        <Leaves />
 
-    <Leaves />
+        <Holidays />
+    </Cell>
 
-    <label>
-        Сколько будет праздников?
-        <input type='number' min=0 bind:value={$holidays} />
-    </label>
+    <Cell span={6}>
+        <Settings />
+    </Cell>
+</LayoutGrid>
 
-    <hr />
+<hr />
 
-    {#each $roles as name, index (index)}
-        <strong>{$spAmount[name]}</strong> {name} <br />
-    {/each}
+<Result />
 
-</main>
+<style lang="scss">
+    //@use '@material/typography/mdc-typography';
+    @use '@material/typography/index' as typography;
 
-<style>
     @import url(https://fonts.googleapis.com/css2?family=Pacifico&display=swap&text=Щё);
 
     :root {
@@ -54,6 +51,7 @@
     }
 
     h1 {
+        @include typography.typography('headline3');
         font-family: 'Pacifico', cursive, sans-serif;
     }
 </style>
