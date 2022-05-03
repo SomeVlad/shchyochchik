@@ -8,27 +8,29 @@
     import Result from './lib/result.svelte'
 </script>
 
-<LayoutGrid>
-    <Cell span={12}>
-        <h1>Щёччик <sup>2.0</sup></h1>
-    </Cell>
+<main>
+    <LayoutGrid>
+        <Cell span={12}>
+            <h1>Щёччик <sup>2.0</sup></h1>
+        </Cell>
 
-    <Cell span={6}>
-        <Amount />
+        <Cell span={6}>
+            <Amount />
 
-        <Duty />
+            <Duty />
 
-        <Leaves />
+            <Leaves />
 
-        <Holidays />
-    </Cell>
+            <Holidays />
+        </Cell>
 
-    <Cell span={6}>
-        <Settings />
+        <Cell span={6}>
+            <Settings />
 
-        <Result />
-    </Cell>
-</LayoutGrid>
+            <Result />
+        </Cell>
+    </LayoutGrid>
+</main>
 
 <style lang='scss'>
   @use '@material/typography/index' as typography;
@@ -41,6 +43,7 @@
   }
 
   main {
+    max-width: 1200px;
     margin: 0 auto;
   }
 
