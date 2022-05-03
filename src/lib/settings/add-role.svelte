@@ -1,5 +1,8 @@
-<script lang="ts">
+<script lang='ts'>
     import { createEventDispatcher } from 'svelte'
+    import { Cell } from '@smui/layout-grid'
+    import Textfield from '@smui/textfield'
+    import IconButton from '@smui/icon-button'
 
     let name = ''
     let amount = 0
@@ -17,14 +20,40 @@
     }
 </script>
 
-<div>
-    <label>
-        Функция
-        <input type="text" bind:value={name} />
-    </label>
-    <label>
-        SP на спринт
-        <input type="number" min="1" bind:value={amount} />
-    </label>
-    <button on:click={handleClick}>Добавить</button>
-</div>
+<Cell span={12}>
+    <div class='wrapper'>
+        <div class='text-field'>
+            <Textfield
+                bind:value={name}
+                variant='outlined'
+                label='Функция'
+                type='text'
+            />
+        </div>
+        <div class='text-field'>
+            <Textfield
+                bind:value={amount}
+                variant='outlined'
+                label='SP на спринт'
+                type='number'
+                min='1'
+            />
+        </div>
+        <IconButton
+            class='material-symbols-outlined'
+            on:click={handleClick}>
+            add
+        </IconButton>
+    </div>
+</Cell>
+
+<style>
+    .wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .text-field {
+        margin-right: 8px;
+    }
+</style>

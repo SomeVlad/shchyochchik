@@ -1,8 +1,9 @@
 <script lang='ts'>
+    import { Cell } from '@smui/layout-grid'
+    import Block from './block.svelte'
     import Function from './function.svelte'
-    import { duty, roles } from '../stores'
 
-    import { settings, amounts, roles, holidays, spAmount } from '../stores'
+    import { amounts, roles } from '../stores'
 
     function handleAmountChange({ detail }) {
         const { amount, name } = detail
@@ -10,18 +11,17 @@
     }
 </script>
 
-<section>
+<Block>
+    <Cell span={12}>
+        <h3>Количество рабочих</h3>
+    </Cell>
     {#each $roles as name, index (index)}
-        <Function
-          name={name}
-          amount={$amounts[name]}
-          on:amountChange={handleAmountChange}
-        />
+        <Cell span={3}>
+            <Function
+                name={name}
+                amount={$amounts[name]}
+                on:amountChange={handleAmountChange}
+            />
+        </Cell>
     {/each}
-</section>
-
-<style>
-    label {
-        display: inline-block;
-    }
-</style>
+</Block>

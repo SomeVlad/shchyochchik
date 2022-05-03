@@ -1,15 +1,20 @@
 <script lang='ts'>
-    import LayoutGrid, { Cell } from '@smui/layout-grid';
+    import { Cell } from '@smui/layout-grid'
+    import Block from './block.svelte'
     import { roles, spAmount } from '../stores'
 </script>
 
-<LayoutGrid>
-{#each $roles as name, index (index)}
+<Block>
     <Cell span={12}>
-        <strong>{$spAmount[name]}</strong> {name}
+        <hr />
+        <h3>Результат</h3>
     </Cell>
-{/each}
-</LayoutGrid>
+    {#each $roles as name, index (index)}
+        <Cell span={12}>
+            {name}: <strong>{$spAmount[name]} SP</strong>
+        </Cell>
+    {/each}
+</Block>
 
 <style>
     label {

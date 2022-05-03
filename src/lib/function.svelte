@@ -1,5 +1,6 @@
 <script lang='ts'>
     import { createEventDispatcher } from 'svelte'
+    import Textfield from '@smui/textfield'
 
     export let name
     export let amount
@@ -14,14 +15,10 @@
     }
 </script>
 
-<section>
-    <label>
-        {`Сколько будет ${name}-разработчиков`}
-        <input
-            type='number'
-            min='0'
-            bind:value={amount}
-            on:change={handleChange}
-        />
-    </label>
-</section>
+<Textfield
+    bind:value={amount}
+    variant='outlined'
+    label={name}
+    type='number'
+    on:change={handleChange}
+/>

@@ -1,5 +1,5 @@
 import { derived, writable, get } from 'svelte/store'
-import { localStore } from "../util/localStore";
+import { localStore } from '../util/localStore'
 
 export type Role = { name: string; sprintCapacity: number }
 export type Amounts = Record<string, number>
@@ -9,12 +9,12 @@ export type Duties = Record<
     string | null
 >
 
-export const settings = localStore('settings', [
+const initialSettings: Role[] = [
     { name: 'BE', sprintCapacity: 15 },
     { name: 'FE', sprintCapacity: 15 },
-])
+]
+export const settings = localStore('settings', initialSettings)
 
-// !!!
 export const roles = derived(settings, ($settings) => {
     return $settings.map(({ name }) => name)
 })
@@ -36,9 +36,9 @@ roles.subscribe((rolesList) => {
 })
 
 export const duty = writable<Duties>({
-    lastWeekDutyRole: null,
-    sprintFirstWeekDutyRole: null,
-    sprintSecondWeekDutyRole: null,
+    lastWeekDutyRole: '',
+    sprintFirstWeekDutyRole: '',
+    sprintSecondWeekDutyRole: '',
 })
 
 // update duty when roles update

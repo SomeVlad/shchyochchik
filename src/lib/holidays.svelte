@@ -1,24 +1,22 @@
 <script lang='ts'>
-    import Textfield from '@smui/textfield';
-
-    import { settings, amounts, roles, holidays, spAmount } from '../stores'
-
-    function handleAmountChange({ detail }) {
-        const { amount, name } = detail
-        $amounts[name] = amount
-    }
+    import Textfield from '@smui/textfield'
+    import { holidays } from '../stores'
+    import { Cell } from '@smui/layout-grid'
+    import Block from './block.svelte'
 </script>
 
-<section>
-    <label>
+<Block>
+    <Cell span={12}>
+        <h3>Праздники</h3>
+    </Cell>
+    <Cell span={12}>
         <Textfield
-          bind:value={$holidays}
-          variant="outlined"
-          label="Праздники"
-          type="number"
+            bind:value={$holidays}
+            variant='outlined'
+            type='number'
         />
-    </label>
-</section>
+    </Cell>
+</Block>
 
 <style>
     label {
