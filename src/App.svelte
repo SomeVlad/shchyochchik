@@ -14,19 +14,18 @@
             <h1>Щёччик <sup>2.0</sup></h1>
         </Cell>
 
-        <Cell span={6}>
+        <Cell span={4}>
             <Amount />
-
-            <Duty />
-
-            <Leaves />
-
             <Holidays />
+            <Leaves />
         </Cell>
-
-        <Cell span={6}>
+        <Cell span={4}>
+            <Duty />
+        </Cell>
+        <Cell span={4}>
             <Settings />
-
+        </Cell>
+        <Cell span={12}>
             <Result />
         </Cell>
     </LayoutGrid>
@@ -44,6 +43,7 @@
 
   main {
     max-width: 1200px;
+    min-width: 340px;
     margin: 0 auto;
   }
 

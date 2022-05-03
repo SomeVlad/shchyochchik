@@ -1,23 +1,22 @@
 <script lang='ts'>
-    import { Cell } from '@smui/layout-grid'
-    import Block from './block.svelte'
+    import { Cell, InnerGrid } from '@smui/layout-grid'
     import { roles, spAmount } from '../stores'
 </script>
 
-<Block>
+<hr />
+<InnerGrid>
     <Cell span={12}>
-        <hr />
-        <h3>🎛 Результат</h3>
+        <h2>🎛 Результат</h2>
     </Cell>
     {#each $roles as name, index (index)}
         <Cell span={12}>
             {name}: <strong>{$spAmount[name]} SP</strong>
         </Cell>
     {/each}
-</Block>
+</InnerGrid>
 
 <style>
-    label {
-        display: inline-block;
+    hr {
+        margin-bottom: 30px;
     }
 </style>

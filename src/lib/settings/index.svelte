@@ -22,7 +22,7 @@
 
 <Block>
     <Cell span={12}>
-        <h3>⚙️ ️Настройка</h3>
+        <h3>⚙️️ Настройка</h3>
     </Cell>
     {#each $settings as { name, sprintCapacity }, index}
         <Cell span={12}>
