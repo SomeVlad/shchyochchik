@@ -34,7 +34,7 @@
             <Textfield
                 bind:value={amount}
                 variant='outlined'
-                label='SP на спринт'
+                label='SP на рабочего'
                 type='number'
                 min='1'
             />

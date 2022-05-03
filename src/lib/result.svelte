@@ -7,7 +7,7 @@
 <Block>
     <Cell span={12}>
         <hr />
-        <h3>Результат</h3>
+        <h3>🎛 Результат</h3>
     </Cell>
     {#each $roles as name, index (index)}
         <Cell span={12}>

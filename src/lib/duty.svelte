@@ -7,10 +7,10 @@
 
 <Block>
     <Cell span={12}>
-        <h3>Дежурства</h3>
+        <h3>👮‍♀️ Дежурства</h3>
     </Cell>
     <Cell span={12}>
-        <span>На второй неделе минувшего спринта</span>
+        <span>На второй неделе <em>минувшего</em> спринта</span>
         <Select
             variant='outlined'
             bind:value={$duty.lastWeekDutyRole}
@@ -25,7 +25,7 @@
 
 
     <Cell span={12}>
-        <span>На первой неделе нового спринта</span>
+        <span>На первой неделе <em>нового</em> спринта</span>
         <Select
             variant='outlined'
             bind:value={$duty.sprintFirstWeekDutyRole}
@@ -39,7 +39,7 @@
     </Cell>
 
     <Cell span={12}>
-        <span>На второй неделе нового спринта</span>
+        <span>На второй неделе <em>нового</em> спринта</span>
         <Select
             variant='outlined'
             bind:value={$duty.sprintSecondWeekDutyRole}
