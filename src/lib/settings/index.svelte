@@ -3,13 +3,13 @@
     import Textfield from '@smui/textfield'
     import IconButton from '@smui/icon-button'
     import Block from '../block.svelte'
-    import { settings, amounts, Role } from '../../stores'
+    import { settings, amounts } from '../../stores'
     import AddRole from './add-role.svelte'
 
     function addToList({ detail }) {
         const { name, amount } = detail
         if (name === '' || $amounts[name]) return
-        const role = { name, sprintCapacity: amount } as Role
+        const role = { name, sprintCapacity: amount }
         // @ts-ignore
         $settings = [...$settings, role]
     }
