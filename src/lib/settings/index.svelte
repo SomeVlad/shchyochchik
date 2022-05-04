@@ -5,6 +5,7 @@
     import Block from '../block.svelte'
     import { settings, amounts } from '../../stores'
     import AddRole from './add-role.svelte'
+    import DeleteIcon from '../../icons/delete.svg.svelte'
 
     function addToList({ detail }) {
         const { name, amount } = detail
@@ -45,9 +46,8 @@
                     />
                 </div>
                 <IconButton
-                    class='material-symbols-outlined'
                     on:click={() => removeFromList(index)}>
-                    delete
+                    <DeleteIcon />
                 </IconButton>
             </div>
         </Cell>

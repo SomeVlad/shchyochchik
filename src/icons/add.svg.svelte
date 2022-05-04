@@ -1,0 +1,3 @@
+<svg viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg' height='48' width='48'>
+    <path d='M23.45 36.7V24.55H11.3V23.45H23.45V11.3H24.55V23.45H36.7V24.55H24.55V36.7Z' />
+</svg>

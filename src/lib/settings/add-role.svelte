@@ -3,6 +3,7 @@
     import { Cell } from '@smui/layout-grid'
     import Textfield from '@smui/textfield'
     import IconButton from '@smui/icon-button'
+    import AddButton from '../../icons/add.svg.svelte'
 
     let name = ''
     let amount = 0
@@ -40,9 +41,8 @@
             />
         </div>
         <IconButton
-            class='material-symbols-outlined'
             on:click={handleClick}>
-            add
+            <AddButton />
         </IconButton>
     </div>
 </Cell>
