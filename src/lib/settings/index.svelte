@@ -31,7 +31,7 @@
                 <div class='text-field'>
                     <Textfield
                         bind:value={name}
-                        variant='outlined'
+                        variant='filled'
                         label='Функция'
                         type='text'
                     />
@@ -39,7 +39,7 @@
                 <div class='text-field'>
                     <Textfield
                         bind:value={sprintCapacity}
-                        variant='outlined'
+                        variant='filled'
                         label='SP на рабочего'
                         type='number'
                         min='1'

@@ -14,7 +14,7 @@
         <Cell span={3}>
             <Textfield
                 bind:value={$leaves[name]}
-                variant='outlined'
+                variant='filled'
                 label={name}
                 type='number'
             />

@@ -17,7 +17,7 @@
 
 <Textfield
     bind:value={amount}
-    variant='outlined'
+    variant='filled'
     label={name}
     type='number'
     on:change={handleChange}

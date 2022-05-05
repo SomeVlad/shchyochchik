@@ -12,7 +12,7 @@
     <Cell span={12}>
         <Textfield
             bind:value={$holidays}
-            variant='outlined'
+            variant='filled'
             type='number'
         />
     </Cell>

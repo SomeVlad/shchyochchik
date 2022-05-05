@@ -12,7 +12,7 @@
     <Cell span={12}>
         <span>На второй неделе <em>минувшего</em> спринта</span>
         <Select
-            variant='outlined'
+            variant='filled'
             bind:value={$duty.lastWeekDutyRole}
             label='Дежурный'
         >
@@ -27,7 +27,7 @@
     <Cell span={12}>
         <span>На первой неделе <em>нового</em> спринта</span>
         <Select
-            variant='outlined'
+            variant='filled'
             bind:value={$duty.sprintFirstWeekDutyRole}
             label='Дежурный'
         >
@@ -41,7 +41,7 @@
     <Cell span={12}>
         <span>На второй неделе <em>нового</em> спринта</span>
         <Select
-            variant='outlined'
+            variant='filled'
             bind:value={$duty.sprintSecondWeekDutyRole}
             label='Дежурный'
         >
