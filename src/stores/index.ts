@@ -109,11 +109,18 @@ export const spAmount = derived(
 
             workDaysAmount -= $leaves[role]
 
-            result[role] = Math.max(
+            const roleResult = Math.max(
                 Math.floor(dailyCapacity * workDaysAmount),
                 0
             )
+
+            if (Number.isSafeInteger(roleResult)) {
+                result[role] = roleResult
+            } else {
+                result[role] = '--'
+            }
         })
+
         return result
     }
 )

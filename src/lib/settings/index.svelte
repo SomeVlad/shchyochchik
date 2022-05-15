@@ -16,6 +16,7 @@
     }
 
     function removeFromList(index) {
+        // @ts-ignore
         $settings.splice(index, 1)
         $settings = $settings
     }
@@ -34,6 +35,7 @@
                         variant='filled'
                         label='Функция'
                         type='text'
+                        required
                     />
                 </div>
                 <div class='text-field'>
@@ -43,6 +45,7 @@
                         label='SP на рабочего'
                         type='number'
                         min='1'
+                        required
                     />
                 </div>
                 <IconButton

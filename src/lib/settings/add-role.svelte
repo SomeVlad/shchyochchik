@@ -19,6 +19,10 @@
         name = ''
         amount = 0
     }
+
+    $: isValidAmount = Number.isSafeInteger(amount) && amount > 0
+    $: isValidName = name.length > 0
+    $: isAddingDisabled = !isValidAmount || !isValidName
 </script>
 
 <Cell span={12}>
@@ -41,6 +45,7 @@
             />
         </div>
         <IconButton
+            disabled={isAddingDisabled}
             on:click={handleClick}>
             <AddButton />
         </IconButton>

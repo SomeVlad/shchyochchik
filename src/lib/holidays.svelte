@@ -14,6 +14,7 @@
             bind:value={$holidays}
             variant='filled'
             type='number'
+            required
         />
     </Cell>
 </Block>

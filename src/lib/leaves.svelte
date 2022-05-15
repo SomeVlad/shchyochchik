@@ -17,6 +17,7 @@
                 variant='filled'
                 label={name}
                 type='number'
+                required
             />
         </Cell>
     {/each}

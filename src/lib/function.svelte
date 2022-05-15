@@ -20,5 +20,6 @@
     variant='filled'
     label={name}
     type='number'
+    required
     on:change={handleChange}
 />
