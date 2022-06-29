@@ -11,7 +11,7 @@
 <main>
     <LayoutGrid>
         <Cell span={12}>
-            <h1>Щёччик <sup>2.0</sup></h1>
+            <h1>Щёччик</h1>
         </Cell>
 
         <Cell span={4}>
@@ -34,7 +34,7 @@
 <style lang='scss'>
   @use '@material/typography/index' as typography;
 
-  @import url(https://fonts.googleapis.com/css2?family=Pacifico&display=swap&text=Щёчик2.0);
+  @import url(https://fonts.googleapis.com/css2?family=Pacifico&display=swap&text=Щёчик);
 
   :root {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
